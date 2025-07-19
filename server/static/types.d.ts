@@ -1,4 +1,4 @@
-// TypeScript type definitions for FileshareCloud frontend
+// TypeScript type definitions for rouillecloud frontend
 export interface FileMeta {
     name: string;
     size: number;

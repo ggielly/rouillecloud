@@ -1,4 +1,4 @@
-// File operations for FileshareCloud web UI
+// File operations for rouillecloud web UI
 export async function createDirectory(name) {
     const res = await fetch('/api/v1/dir', {
         method: 'POST',

@@ -32,7 +32,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .with(tracing_subscriber::fmt::layer())
         .init();
     
-    tracing::info!("Starting FileshareCloud server");
+    tracing::info!("Starting rouillecloud server");
     
     // Load configuration
     let config = AppConfig::from_file(&cli.config).await?;
