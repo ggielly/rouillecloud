@@ -1,4 +1,4 @@
-# RouilleCloud
+# RouilleCloud (WiP)
 
 A modern, high-performance file sharing server (similar to NextCloud/Seafile), written in Rust.
 
