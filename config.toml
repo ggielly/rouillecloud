@@ -1,0 +1,50 @@
+# RouilleCloud Server Configuration
+
+[server]
+host = "127.0.0.1"
+port = 8080
+max_connections = 25000
+keep_alive = 75
+client_timeout = 5000
+client_shutdown = 5000
+
+[server.cors]
+allowed_origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
+allow_credentials = true
+
+[server.rate_limiting]
+enabled = true
+requests_per_minute = 1000
+burst_size = 100
+
+[database]
+type = "sqlite"
+url = "sqlite:./data/fileshare.db"
+max_connections = 10
+min_connections = 1
+acquire_timeout = 30
+idle_timeout = 600
+
+[storage]
+type = "local"
+local_path = "./data/files"
+max_file_size = 10737418240  # 10GB
+chunk_size = 1048576        # 1MB
+
+[auth]
+jwt_secret = "your-super-secret-jwt-key-change-this-in-production"
+jwt_expiration = 86400      # 24 hours
+session_timeout = 3600      # 1 hour
+enable_mfa = false
+password_policy.min_length = 8
+password_policy.require_uppercase = true
+password_policy.require_lowercase = true
+password_policy.require_numbers = true
+password_policy.require_special = false
+
+[monitoring]
+metrics_enabled = true
+prometheus_endpoint = "/metrics"
+health_check_endpoint = "/health"
+log_level = "info"
+log_format = "json"

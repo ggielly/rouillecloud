@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build FileshareCloud",
+			"type": "shell",
+			"command": "cargo build --workspace",
+			"group": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"isBackground": false
+		}
+	]
+}

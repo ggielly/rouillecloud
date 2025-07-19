@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "server",
+    "client", 
+    "shared/protocol",
+    "shared/crypto",
+    "shared/sync-core"
+]
+resolver = "2"

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileshareCloud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>FileshareCloud</h1>
+            <nav>
+                <button id="btn-files">Files</button>
+                <button id="btn-users">Users</button>
+                <button id="btn-admin">Admin</button>
+                <button id="btn-theme">🌙/☀️</button>
+            </nav>
+        </header>
+        <main>
+            <section id="file-browser" class="active">
+                <h2>File Browser</h2>
+                <div id="file-ops">
+                    <input type="text" id="new-dir-name" placeholder="New directory name">
+                    <button id="btn-create-dir">Create Directory</button>
+                    <input type="text" id="new-file-name" placeholder="New file name">
+                    <button id="btn-create-file">Create File</button>
+                    <input type="text" id="rename-old" placeholder="Old name">
+                    <input type="text" id="rename-new" placeholder="New name">
+                    <button id="btn-rename">Rename</button>
+                    <input type="text" id="delete-name" placeholder="Name to delete">
+                    <button id="btn-delete">Delete</button>
+                </div>
+                <div id="drop-zone">Drag & drop files here to upload</div>
+                <div id="dir-nav">
+                    <button id="btn-up">⬆️ Up</button>
+                    <span id="current-path">/</span>
+                </div>
+                <ul id="file-list"></ul>
+            </section>
+            <section id="user-panel" class="hidden">
+                <h2>User Management</h2>
+                <div id="user-list"></div>
+            </section>
+            <section id="admin-panel" class="hidden">
+                <h2>Admin Panel</h2>
+                <div id="admin-controls"></div>
+            </section>
+        </main>
+        <footer>
+            <span id="sync-status">Sync: Connected</span>
+        </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

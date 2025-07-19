@@ -1,0 +1,43 @@
+[package]
+name = "fileshare-client"
+version = "0.1.0"
+edition = "2021"
+authors = ["Guillaume Gielly <guillaume@dialup.fr>"]
+description = "rouillecloud-client : a cross-platform file sharing client"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+futures = "0.3"
+
+# HTTP client
+reqwest = { version = "0.12.22", features = ["json", "stream", "rustls-tls"] }
+
+# File system monitoring
+notify = "8.1.0"
+
+# Utilities
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+blake3 = "1.5"
+dirs = "6.0.0"
+
+# Encryption
+aes-gcm = "0.10"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Configuration
+config = "0.15.13"
+
+# Shared workspace dependencies
+protocol = { path = "../shared/protocol" }
+crypto = { path = "../shared/crypto" }
+sync-core = { path = "../shared/sync-core" }
